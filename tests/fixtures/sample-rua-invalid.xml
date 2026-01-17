@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feedback>
+  <report_metadata>
+    <org_name>Test Org</org_name>
+    <!-- Missing required fields: email, report_id -->
+    <date_range>
+      <begin>invalid_timestamp</begin>
+      <end>1641081600</end>
+    </date_range>
+  </report_metadata>
+  <policy_published>
+    <domain>test.com</domain>
+    <p>invalid_policy</p>
+  </policy_published>
+  <record>
+    <row>
+      <source_ip>not_an_ip_address</source_ip>
+      <count>-5</count>
+      <policy_evaluated>
+        <disposition>none</disposition>
+        <dkim>maybe</dkim>
+        <spf>unknown</spf>
+      </policy_evaluated>
+    </row>
+  </record>
+</feedback>

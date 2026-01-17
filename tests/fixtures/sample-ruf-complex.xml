@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feedback>
+  <report_metadata>
+    <org_name>Amazon SES</org_name>
+    <email>dmarc-reports@amazon.com</email>
+    <report_id>ruf-ses-2024-01-15-abc123</report_id>
+    <date_range>
+      <begin>1641211200</begin>
+      <end>1641214800</end>
+    </date_range>
+  </report_metadata>
+  <policy_published>
+    <domain>secure-domain.com</domain>
+    <adkim>s</adkim>
+    <aspf>s</aspf>
+    <p>reject</p>
+    <sp>reject</sp>
+    <pct>100</pct>
+    <fo>1</fo>
+  </policy_published>
+  <record>
+    <row>
+      <source_ip>203.0.113.42</source_ip>
+      <policy_evaluated>
+        <disposition>reject</disposition>
+        <dkim>fail</dkim>
+        <spf>pass</spf>
+        <reason>
+          <type>local_policy</type>
+          <comment>SPF passed but DKIM failed with strict alignment</comment>
+        </reason>
+      </policy_evaluated>
+    </row>
+    <identifiers>
+      <header_from>secure-domain.com</header_from>
+      <envelope_from>mail.secure-domain.com</envelope_from>
+      <envelope_to>recipient@example.org</envelope_to>
+    </identifiers>
+    <auth_results>
+      <dkim>
+        <domain>mail.secure-domain.com</domain>
+        <result>fail</result>
+        <selector>selector1</selector>
+        <human_result>signature verification failed</human_result>
+      </dkim>
+      <dkim>
+        <domain>other-domain.com</domain>
+        <result>none</result>
+        <selector>default</selector>
+      </dkim>
+      <spf>
+        <domain>mail.secure-domain.com</domain>
+        <result>pass</result>
+        <scope>mfrom</scope>
+      </spf>
+    </auth_results>
+    <sample>
+      <headers>Received: from mail.secure-domain.com (203.0.113.42) by mx.example.org
+	with ESMTP id abc123
+	for &lt;recipient@example.org&gt;;
+	Sat, 15 Jan 2024 12:00:00 +0000
+From: sender@secure-domain.com
+To: recipient@example.org
+Subject: Important Security Update
+Date: Sat, 15 Jan 2024 12:00:00 +0000
+Message-ID: &lt;abc123@mail.secure-domain.com&gt;
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mail.secure-domain.com; s=selector1;
+	h=from:to:subject:date:message-id;
+	bh=invalid_body_hash;
+	b=invalid_signature</headers>
+      <body>Dear valued customer,
+
+This is a test message to verify DMARC forensic reporting.
+
+Please disregard this message.
+
+Best regards,
+Security Team</body>
+    </sample>
+  </record>
+</feedback>

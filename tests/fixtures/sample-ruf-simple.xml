@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feedback>
+  <report_metadata>
+    <org_name>Yahoo! Inc.</org_name>
+    <email>dmarc-noreply@yahoo-inc.com</email>
+    <report_id>ruf-12345678-abcd-efgh</report_id>
+    <date_range>
+      <begin>1641038400</begin>
+      <end>1641124800</end>
+    </date_range>
+  </report_metadata>
+  <policy_published>
+    <domain>example.com</domain>
+    <adkim>r</adkim>
+    <aspf>r</aspf>
+    <p>quarantine</p>
+    <sp>quarantine</sp>
+    <pct>100</pct>
+  </policy_published>
+  <record>
+    <row>
+      <source_ip>198.51.100.25</source_ip>
+      <policy_evaluated>
+        <disposition>quarantine</disposition>
+        <dkim>fail</dkim>
+        <spf>fail</spf>
+      </policy_evaluated>
+    </row>
+    <identifiers>
+      <header_from>example.com</header_from>
+      <envelope_from>spammer.example.net</envelope_from>
+    </identifiers>
+    <auth_results>
+      <dkim>
+        <domain>spammer.example.net</domain>
+        <result>fail</result>
+      </dkim>
+      <spf>
+        <domain>spammer.example.net</domain>
+        <result>fail</result>
+        <scope>mfrom</scope>
+      </spf>
+    </auth_results>
+  </record>
+</feedback>

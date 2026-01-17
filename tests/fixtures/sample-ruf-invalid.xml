@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feedback>
+  <report_metadata>
+    <org_name>Invalid Corp</org_name>
+    <!-- Missing required email and report_id -->
+    <date_range>
+      <begin>not_a_timestamp</begin>
+      <end>1641124800</end>
+    </date_range>
+  </report_metadata>
+  <policy_published>
+    <domain>test.com</domain>
+    <p>invalid_policy_value</p>
+  </policy_published>
+  <record>
+    <row>
+      <source_ip>not_an_ip</source_ip>
+      <policy_evaluated>
+        <disposition>invalid_disposition</disposition>
+        <dkim>maybe</dkim>
+        <spf>unknown</spf>
+      </policy_evaluated>
+    </row>
+    <identifiers>
+      <!-- Missing required header_from -->
+    </identifiers>
+    <auth_results>
+      <!-- Missing required dkim and spf arrays -->
+    </auth_results>
+  </record>
+</feedback>

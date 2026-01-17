@@ -1,0 +1,8 @@
+dist
+dist-electron
+node_modules
+.pnpm-store
+pnpm-lock.yaml
+coverage
+*.log
+.DS_Store
