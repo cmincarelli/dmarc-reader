@@ -15,6 +15,9 @@ import { eq, desc } from 'drizzle-orm';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
+// Detect if running in development or production
+const isDevelopment = !app.isPackaged;
+
 let tray: Tray | null = null;
 
 /**
@@ -23,8 +26,20 @@ let tray: Tray | null = null;
 export function createTray(mainWindow: BrowserWindow): Tray {
   // For macOS menubar, use PNG and set as template image
   // Template images automatically adapt to light/dark mode
-  const iconPath = path.join(__dirname, '../../../build/icons/tray-icon.png');
+
+  // Get the correct path for both development and production
+  let iconPath: string;
+  if (isDevelopment) {
+    // Development: electron/utils -> ../../../build/icons
+    iconPath = path.join(__dirname, '../../../build/icons/tray-icon.png');
+  } else {
+    // Production: use app.getAppPath() to get the asar root
+    iconPath = path.join(app.getAppPath(), 'build/icons/tray-icon.png');
+  }
+
+  console.log('[TRAY] Loading icon from:', iconPath);
   const icon = nativeImage.createFromPath(iconPath);
+  console.log('[TRAY] Icon loaded, isEmpty:', icon.isEmpty());
 
   // For macOS, set as template image (recommended for menubar icons)
   if (process.platform === 'darwin' && !icon.isEmpty()) {
