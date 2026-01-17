@@ -75,18 +75,18 @@ DMARC Reader is a native desktop application that makes analyzing DMARC (Domain-
 
 ### Latest Release
 
-> **Coming Soon**: Pre-built binaries will be available once the first release is published. Watch this repo or check [Releases](https://github.com/YOUR_USERNAME/Dmarc_Reader/releases) for updates.
+> **Coming Soon**: Pre-built binaries will be available once the first release is published. Watch this repo or check [Releases](https://github.com/cmincarelli/dmarc-reader/releases) for updates.
 
 **macOS**
 - Universal Binary (Apple Silicon & Intel)
-  - [DMARC-Reader-universal.dmg](https://github.com/YOUR_USERNAME/Dmarc_Reader/releases/latest/download/DMARC-Reader-universal.dmg)
+  - [DMARC-Reader-universal.dmg](https://github.com/cmincarelli/dmarc-reader/releases/latest/download/DMARC-Reader-universal.dmg)
 
 **Windows** (Planned)
-- [DMARC-Reader-Setup.exe](https://github.com/YOUR_USERNAME/Dmarc_Reader/releases/latest/download/DMARC-Reader-Setup.exe)
+- [DMARC-Reader-Setup.exe](https://github.com/cmincarelli/dmarc-reader/releases/latest/download/DMARC-Reader-Setup.exe)
 
 **Linux** (Planned)
-- [DMARC-Reader.AppImage](https://github.com/YOUR_USERNAME/Dmarc_Reader/releases/latest/download/DMARC-Reader.AppImage)
-- [DMARC-Reader.deb](https://github.com/YOUR_USERNAME/Dmarc_Reader/releases/latest/download/DMARC-Reader.deb)
+- [DMARC-Reader.AppImage](https://github.com/cmincarelli/dmarc-reader/releases/latest/download/DMARC-Reader.AppImage)
+- [DMARC-Reader.deb](https://github.com/cmincarelli/dmarc-reader/releases/latest/download/DMARC-Reader.deb)
 
 ### System Requirements
 
@@ -225,7 +225,7 @@ if passRate < 80%: healthScore = (passRate / 80) * 70
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/Dmarc_Reader.git
+git clone https://github.com/cmincarelli/dmarc-reader.git
 cd Dmarc_Reader
 
 # Install dependencies
@@ -435,9 +435,9 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 Need help? Have questions?
 
-- 📖 **[Documentation](https://github.com/YOUR_USERNAME/Dmarc_Reader/wiki)** - Detailed guides and FAQs
-- 🐛 **[Issue Tracker](https://github.com/YOUR_USERNAME/Dmarc_Reader/issues)** - Report bugs or request features
-- 💬 **[Discussions](https://github.com/YOUR_USERNAME/Dmarc_Reader/discussions)** - Ask questions and share ideas
+- 📖 **[Documentation](https://github.com/cmincarelli/dmarc-reader/wiki)** - Detailed guides and FAQs
+- 🐛 **[Issue Tracker](https://github.com/cmincarelli/dmarc-reader/issues)** - Report bugs or request features
+- 💬 **[Discussions](https://github.com/cmincarelli/dmarc-reader/discussions)** - Ask questions and share ideas
 
 ---
 
@@ -446,5 +446,5 @@ Need help? Have questions?
 
   **⭐ If you find this project useful, please consider starring it on GitHub!**
 
-  [Star this repo](https://github.com/YOUR_USERNAME/Dmarc_Reader) • [Follow for updates](https://github.com/YOUR_USERNAME)
+  [Star this repo](https://github.com/cmincarelli/dmarc-reader) • [Follow for updates](https://github.com/YOUR_USERNAME)
 </div>
