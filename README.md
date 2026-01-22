@@ -406,7 +406,7 @@ This application follows security best practices:
 
 ### Reporting Security Issues
 
-If you discover a security vulnerability, please email **YOUR_EMAIL_HERE** instead of using the public issue tracker. Include:
+If you discover a security vulnerability, please email **chrism@theanchorlight.com** instead of using the public issue tracker. Include:
 - Description of the vulnerability
 - Steps to reproduce
 - Potential impact
